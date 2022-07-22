@@ -3,6 +3,8 @@ import * as cors from 'cors';
 import { connect } from './database/database'
 
 const app = express();
+app.disable("x-powered-by");
+
 
 const options: cors.CorsOptions = {
   origin: 'http://localhost:3000',
