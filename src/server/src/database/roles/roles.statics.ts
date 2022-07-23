@@ -1,5 +1,5 @@
 
-import { IRoleDocument, IRoleModel } from "./roles.types";
+import { IRoleDocument, /* IRoleModel */ } from "./roles.types";
 
 /* Static methods are executed on the model itself, rather than on particular instances.
 We can define static methods in their own file, using the model as the first argument, 

@@ -1,4 +1,4 @@
-import bcrypt from "bcryptjs";
+import * as bcrypt from "bcryptjs";
 import { Document } from "mongoose";
 import { IUserDocument } from "./users.types";
 
@@ -12,8 +12,8 @@ export async function setPassword(pass: string) {
   this.password = hash;
 }
 
-export async function checkPassword(pass: string) {
-  return await bcrypt.compare(pass, this.password);
+export async function checkPassword(pass: string): Promise<boolean> {
+  return bcrypt.compare(pass, this.password);
 }
 
 export async function setLastUpdateDate(
